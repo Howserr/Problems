@@ -1,6 +1,10 @@
 import React from 'react';
-import LogItem from './Log/LogItem';
 import Log from './Log';
+import LogList from './LogList/LogList';
+
+interface DashboardState {
+    logs: Log[]
+}
 
 class Dashboard extends React.Component<{}, DashboardState> {
     state: DashboardState = {
@@ -33,18 +37,10 @@ class Dashboard extends React.Component<{}, DashboardState> {
     render() {
         return(
             <div>
-                {this.state.logs.map((log: Log) => (
-                    <LogItem log={log} key={log.id}/>
-                ))}
+                <LogList logs={this.state.logs}/>
             </div>
         );
     }
-}
-
-
-
-interface DashboardState {
-    logs: Log[]
 }
 
 export default Dashboard;

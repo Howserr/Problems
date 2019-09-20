@@ -7,9 +7,7 @@ interface LogProps {
     key: number;
 }
 
-
-
-const LogItem: React.FC<LogProps> = (props: LogProps) => {
+const LogListItem: React.FC<LogProps> = (props: LogProps) => {
     return(
         <Row>
             <Col>{props.log.time.toDateString()}</Col>
@@ -20,4 +18,4 @@ const LogItem: React.FC<LogProps> = (props: LogProps) => {
     );
 }
 
-export default LogItem;
+export default LogListItem;
