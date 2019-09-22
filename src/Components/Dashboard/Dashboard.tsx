@@ -14,9 +14,6 @@ interface DashboardState {
 class Dashboard extends React.Component<{}, DashboardState> {
     constructor(props: any) {
         super(props)
-
-
-        
         this.state = {
             logs: [],
             applications: [],
