@@ -5,10 +5,10 @@ import './App.css';
 
 const App: React.FC = () => {
   return (
-    <Container>
+    <Container fluid>
       <Dashboard />
     </Container>
-  );
+  ); 
 }
 
 export default App;

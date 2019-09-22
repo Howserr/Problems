@@ -66,7 +66,7 @@ class Dashboard extends React.Component<{}, DashboardState> {
         return(
             <div>
                 <Row>
-                    <Col xs="3">
+                    <Col xs="3" style={{padding: "0"}}>
                         <LogFilter filterItems={this.state.applications} 
                         selectedItems={this.state.selectedApplications} 
                         onFilterItemClicked={this.toggleApplicationFilter} 
@@ -74,7 +74,7 @@ class Dashboard extends React.Component<{}, DashboardState> {
                         onUnselectAllClicked={this.toggleOffAllApplicationFilters}>
                         </LogFilter>
                     </Col>
-                    <Col xs="9">
+                    <Col xs="9" style={{padding: "0"}}>
                         <LogList logs={this.filteredLogs()}/>
                     </Col>
                 </Row>
