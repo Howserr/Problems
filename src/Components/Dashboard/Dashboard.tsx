@@ -15,20 +15,30 @@ class Dashboard extends React.Component<{}, DashboardState> {
     constructor(props: any) {
         super(props)
 
-        let logsService = new LogsService();
-        let logs = logsService.getLogs();
-        let applications = logsService.getApplications();
+
         
         this.state = {
-            logs: logs,
-            applications: applications,
-            selectedApplications: [...applications]
+            logs: [],
+            applications: [],
+            selectedApplications: []
         }
 
         this.toggleApplicationFilter = this.toggleApplicationFilter.bind(this);
         this.toggleOnAllApplicationFilters = this.toggleOnAllApplicationFilters.bind(this);
         this.toggleOffAllApplicationFilters = this.toggleOffAllApplicationFilters.bind(this);
         this.filteredLogs = this.filteredLogs.bind(this);
+    }
+
+    async componentDidMount() {
+        let logsService = new LogsService();
+        let logs = await logsService.getLogs();
+        let applications = await logsService.getApplications();
+
+        this.setState({
+            logs: logs,
+            applications: applications,
+            selectedApplications: [...applications]
+        })
     }
 
     toggleApplicationFilter(application: string) {
