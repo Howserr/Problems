@@ -65,7 +65,7 @@ class Dashboard extends React.Component<{}, DashboardState> {
     }
 
     toggleOnAllApplicationFilters() {
-        this.setState({ selectedApplications: this.state.applications })
+        this.setState({ selectedApplications: [...this.state.applications] })
     }
 
     toggleOffAllApplicationFilters() {
