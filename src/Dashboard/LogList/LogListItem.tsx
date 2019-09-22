@@ -31,7 +31,7 @@ class LogListItem extends React.Component<LogProps, LogListItemState> {
         return (
             <ListGroupItem tag="button" action onClick={this.toggle}>
                 <Row>
-                    <Col xs="4">{this.props.log.time.toDateString()}</Col>
+                    <Col xs="4">{this.props.log.time.toUTCString()}</Col>
                     <Col xs="4">{this.props.log.clientId}</Col>
                     <Col xs="4">{this.props.log.message}</Col>
                 </Row>
