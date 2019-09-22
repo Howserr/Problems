@@ -48,18 +48,28 @@ class Dashboard extends React.Component<{}, DashboardState> {
             selectedApplications: ["Members", "Website"]
         }
 
-        this.toggleFilterApplication = this.toggleFilterApplication.bind(this);
+        this.toggleApplicationFilter = this.toggleApplicationFilter.bind(this);
+        this.toggleOnAllApplicationFilters = this.toggleOnAllApplicationFilters.bind(this);
+        this.toggleOffAllApplicationFilters = this.toggleOffAllApplicationFilters.bind(this);
         this.filteredLogs = this.filteredLogs.bind(this);
     }
 
-    toggleFilterApplication(application: string) {
+    toggleApplicationFilter(application: string) {
         const index = this.state.selectedApplications.indexOf(application);
         if (index < 0) {
             this.state.selectedApplications.push(application);
         } else {
             this.state.selectedApplications.splice(index, 1);
         }
-        this.setState({ selectedApplications: [...this.state.selectedApplications]})
+        this.setState({ selectedApplications: [...this.state.selectedApplications] })
+    }
+
+    toggleOnAllApplicationFilters() {
+        this.setState({ selectedApplications: this.state.applications })
+    }
+
+    toggleOffAllApplicationFilters() {
+        this.setState({ selectedApplications: [] })
     }
 
     filteredLogs() {
@@ -73,7 +83,12 @@ class Dashboard extends React.Component<{}, DashboardState> {
             <div>
                 <Row>
                     <Col xs="3">
-                        <LogFilter filterItems={this.state.applications} selectedItems={this.state.selectedApplications} onFilterItemClicked={this.toggleFilterApplication}></LogFilter>
+                        <LogFilter filterItems={this.state.applications} 
+                        selectedItems={this.state.selectedApplications} 
+                        onFilterItemClicked={this.toggleApplicationFilter} 
+                        onSelectAllClicked={this.toggleOnAllApplicationFilters} 
+                        onUnselectAllClicked={this.toggleOffAllApplicationFilters}>
+                        </LogFilter>
                     </Col>
                     <Col xs="9">
                         <LogList logs={this.filteredLogs()}/>
