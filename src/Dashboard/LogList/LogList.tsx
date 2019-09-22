@@ -7,8 +7,6 @@ interface LogListProps {
     logs: Log[];
 }
 
-
-
 const LogList: React.FC<LogListProps> = (props: LogListProps) => {
     return(
         <ListGroup>
