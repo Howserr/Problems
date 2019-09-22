@@ -1,5 +1,5 @@
 import React from "react";
-import { ListGroup, ListGroupItem, Button, Row, ButtonGroup } from "reactstrap";
+import { ListGroup, ListGroupItem, Button, ButtonGroup } from "reactstrap";
 
 interface LogFilterProps {
     filterItems: string[];

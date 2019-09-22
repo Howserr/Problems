@@ -3,6 +3,7 @@ import Log from './Log';
 import LogList from './LogList/LogList';
 import LogFilter from './LogFilter/LogFilter';
 import { Row, Col } from 'reactstrap';
+import LogsService from '../../Services/LogsServices';
 
 interface DashboardState {
     logs: Log[];
@@ -13,39 +14,15 @@ interface DashboardState {
 class Dashboard extends React.Component<{}, DashboardState> {
     constructor(props: any) {
         super(props)
+
+        let logsService = new LogsService();
+        let logs = logsService.getLogs();
+        let applications = logsService.getApplications();
+        
         this.state = {
-            logs: [
-                {
-                    id: 1,
-                    message: "Test Message1",
-                    stackTrace: "Error thrown at SomeClass.cs",
-                    time: new Date('2019-09-01 08:47:45'),
-                    clientId: "Members"
-                },
-                {
-                    id: 2,
-                    message: "Test Message2",
-                    stackTrace: "Error thrown at SomeClass.cs",
-                    time: new Date('2019-09-02 11:00:38'),
-                    clientId: "Members"
-                },
-                {
-                    id: 3,
-                    message: "Test Message3",
-                    stackTrace: "Error thrown at SomeClass.cs",
-                    time: new Date('2019-09-03 17:02:09'),
-                    clientId: "Members"
-                },
-                {
-                    id: 4,
-                    message: "Test Message4",
-                    stackTrace: "Error thrown at SomeClass.cs",
-                    time: new Date('2019-09-04 14:34:22'),
-                    clientId: "Website"
-                }
-            ],
-            applications: ["Members", "Website"],
-            selectedApplications: ["Members", "Website"]
+            logs: logs,
+            applications: applications,
+            selectedApplications: [...applications]
         }
 
         this.toggleApplicationFilter = this.toggleApplicationFilter.bind(this);
