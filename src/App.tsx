@@ -5,9 +5,11 @@ import './App.css';
 
 const App: React.FC = () => {
   return (
-    <Container fluid>
-      <Dashboard />
-    </Container>
+    <div className="wrapper">
+      <Container fluid>
+        <Dashboard />
+      </Container>
+    </div>
   ); 
 }
 

@@ -12,14 +12,14 @@ interface LogFilterProps {
 
 const LogFilter: React.FC<LogFilterProps> = (props: LogFilterProps) => {
     return(
-        <div>
-            <ButtonGroup>
-                <Button color="success" onClick={props.onSelectAllClicked}>Select All</Button>
-                <Button color="danger" onClick={props.onUnselectAllClicked}>Unselect All</Button>
+        <div className="rounded-0">
+            <ButtonGroup style={{width: "100%" }}>
+                <Button className="rounded-0" color="success" onClick={props.onSelectAllClicked}>Select All</Button>
+                <Button className="rounded-0" color="danger" onClick={props.onUnselectAllClicked}>Unselect All</Button>
             </ButtonGroup>
             <ListGroup>
-                {props.filterItems.map((item: string) => (
-                    <ListGroupItem tag="button" action onClick={() => props.onFilterItemClicked(item)} active={props.selectedItems.includes(item)}>{item}</ListGroupItem>
+                {props.filterItems.map((item: string, key: number) => (
+                    <ListGroupItem key={key} tag="button" className="rounded-0" action onClick={() => props.onFilterItemClicked(item)} active={props.selectedItems.includes(item)}>{item}</ListGroupItem>
                 ))}
             </ListGroup>
         </div>

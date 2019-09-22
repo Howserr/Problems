@@ -9,7 +9,7 @@ interface LogListProps {
 
 const LogList: React.FC<LogListProps> = (props: LogListProps) => {
     return(
-        <ListGroup>
+        <ListGroup flush>
             {props.logs.map((log: Log) => (
                 <LogListItem log={log} key={log.id}/>
             ))}

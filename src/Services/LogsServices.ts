@@ -33,7 +33,112 @@ class LogsService {
                     clientId: "Members"
                 },
                 {
-                    id: 4,
+                    id: 5,
+                    message: "Test Message4",
+                    stackTrace: "Error thrown at SomeClass.cs",
+                    time: new Date('2019-09-04 14:34:22'),
+                    clientId: "Website"
+                },
+                {
+                    id: 6,
+                    message: "Test Message4",
+                    stackTrace: "Error thrown at SomeClass.cs",
+                    time: new Date('2019-09-04 14:34:22'),
+                    clientId: "Website"
+                },
+                {
+                    id: 7,
+                    message: "Test Message4",
+                    stackTrace: "Error thrown at SomeClass.cs",
+                    time: new Date('2019-09-04 14:34:22'),
+                    clientId: "Website"
+                },
+                {
+                    id: 8,
+                    message: "Test Message4",
+                    stackTrace: "Error thrown at SomeClass.cs",
+                    time: new Date('2019-09-04 14:34:22'),
+                    clientId: "Website"
+                },
+                {
+                    id: 9,
+                    message: "Test Message4",
+                    stackTrace: "Error thrown at SomeClass.cs",
+                    time: new Date('2019-09-04 14:34:22'),
+                    clientId: "Website"
+                },
+                {
+                    id: 10,
+                    message: "Test Message4",
+                    stackTrace: "Error thrown at SomeClass.cs",
+                    time: new Date('2019-09-04 14:34:22'),
+                    clientId: "Website"
+                },
+                {
+                    id: 11,
+                    message: "Test Message4",
+                    stackTrace: "Error thrown at SomeClass.cs",
+                    time: new Date('2019-09-04 14:34:22'),
+                    clientId: "Website"
+                },
+                {
+                    id: 12,
+                    message: "Test Message4",
+                    stackTrace: "Error thrown at SomeClass.cs",
+                    time: new Date('2019-09-04 14:34:22'),
+                    clientId: "Website"
+                },
+                {
+                    id: 13,
+                    message: "Test Message4",
+                    stackTrace: "Error thrown at SomeClass.cs",
+                    time: new Date('2019-09-04 14:34:22'),
+                    clientId: "Website"
+                },
+                {
+                    id: 14,
+                    message: "Test Message4",
+                    stackTrace: "Error thrown at SomeClass.cs",
+                    time: new Date('2019-09-04 14:34:22'),
+                    clientId: "Website"
+                },
+                {
+                    id: 15,
+                    message: "Test Message4",
+                    stackTrace: "Error thrown at SomeClass.cs",
+                    time: new Date('2019-09-04 14:34:22'),
+                    clientId: "Website"
+                },
+                {
+                    id: 16,
+                    message: "Test Message4",
+                    stackTrace: "Error thrown at SomeClass.cs",
+                    time: new Date('2019-09-04 14:34:22'),
+                    clientId: "Website"
+                },
+                {
+                    id: 17,
+                    message: "Test Message4",
+                    stackTrace: "Error thrown at SomeClass.cs",
+                    time: new Date('2019-09-04 14:34:22'),
+                    clientId: "Website"
+                },
+                {
+                    id: 18,
+                    message: "Test Message4",
+                    stackTrace: "Error thrown at SomeClass.cs",
+                    time: new Date('2019-09-04 14:34:22'),
+                    clientId: "Website"
+                },
+                {
+                    id: 19,
+                    message: "Test Message4",
+                    stackTrace: "Error thrown at SomeClass.cs",
+                    time: new Date('2019-09-04 14:34:22'),
+                    clientId: "Website"
+                },
+                {
+                    id: 20,
                     message: "Test Message4",
                     stackTrace: "Error thrown at SomeClass.cs",
                     time: new Date('2019-09-04 14:34:22'),
